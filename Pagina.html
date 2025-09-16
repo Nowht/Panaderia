@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid d-flex justify-content-center">
+                <h1 class="text-light m-3">Cálculo del costo de Producción de panes</h1>
+            </div>
+        </nav>
+    </header>
+    <main style="min-height: 100vh; display: flex; flex-direction: column;">
+        <section class="d-flex flex-md-row flex-column gap-5 justify-content-center align-items-center" style="flex: 1;">
+            <div class="col-sm-12 col-lg-5 border rounded-5 p-5 h-100" style="min-height: 600px;">
+                <h1 class="text-center mb-5">Panes</h1>
+                <form action="" class="container">
+                    <div class="row row-cols-2 g-3 justify-content-center">
+                        <div class="col d-flex flex-column align-items-center" style="width: 200px;">
+                            <input type="radio" class="btn-check" name="options-base" id="option1" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="option1" style="width: 150px;">
+                                <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
+                                <div class="mt-2">Pan 1</div>
+                            </label>
+                        </div>
+                        <div class="col d-flex flex-column align-items-center" style="width: 200px;">
+                            <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="option2" style="width: 150px;">
+                                <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
+                                <div class="mt-2">Pan 2</div>
+                            </label>
+                        </div>
+                        <div class="col d-flex flex-column align-items-center" style="width: 200px;">
+                            <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="option3" style="width: 150px;">
+                                <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
+                                <div class="mt-2">Pan 3</div>
+                            </label>
+                        </div>
+                        <div class="col d-flex flex-column align-items-center" style="width: 200px;">
+                            <input type="radio" class="btn-check" name="options-base" id="option4" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="option4" style="width: 150px;">
+                                <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
+                                <div class="mt-2">Pan 4</div>
+                            </label>
+                        </div>
+                        <div class="col d-flex flex-column align-items-center" style="width: 200px;">
+                            <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="option5" style="width: 150px;">
+                                <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
+                                <div class="mt-2">Pan 5</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row g-3 justify-content-center align-items-center m-3">
+                        <div class="col-auto">
+                            <label for="cantidad" class="form-label m-0">Cantidad</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="number" class="form-control" id="cantidad" min="1" value="1">
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-12 col-lg-5 border rounded-5 p-5 h-100 row align-items-center justify-content-center" style="min-height: 600px;">
+                <h1 class="col-12 text-center">Resultados</h1>
+                <form action="" class="col-12 row gx-5 justify-content-center align-items-center">
+                    <div class="col-6">
+                        <div id="MD" class="form-text m-0">Material Directo</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">MD</span>
+                            <input type="text" class="form-control" aria-label="MD"
+                                aria-describedby="basic-addon1" id="MD" disabled>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="MOD" class="form-text m-0">Mano de Obra Directa</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">MOD</span>
+                            <input type="text" class="form-control" aria-label="MOD"
+                                aria-describedby="basic-addon1" id="MOD" disabled>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="CIF" class="form-text m-0">Costos Indirectos de Fabricación</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">CIF</span>
+                            <input type="text" class="form-control" aria-label="CIF" aria-describedby="basic-addon1"
+                                id="CIF" disabled>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="CT" class="form-text m-0">Costo Total</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">CT</span>
+                            <input type="text" class="form-control" aria-label="CT"
+                                aria-describedby="basic-addon1" id="CT" disabled>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="CU" class="form-text m-0">Costo Unitario</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">CU</span>
+                            <input type="text" class="form-control" aria-label="CU"
+                                aria-describedby="basic-addon1" id="CU" disabled>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar bg-dark border-top border-body" data-bs-theme="dark">
+            <div class="container-fluid d-flex justify-content-center">
+                <p class="text-light m-3">2025</p>
+            </div>
+        </nav>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+<script src="logica.js"></script>
+
+</html>
