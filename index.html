@@ -24,36 +24,36 @@
                 <form action="" class="container">
                     <div class="row g-3 justify-content-center">
                         <div class="col-2 d-flex flex-column align-items-center" style="width: 200px;">
-                            <input type="radio" class="btn-check" name="options-base" id="option1" autocomplete="off">
-                            <label class="btn btn-outline-dark" for="option1" style="width: 150px;">
+                            <input type="radio" class="btn-check" name="options-base" id="xecas" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="xecas" style="width: 150px;">
                                 <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
                                 <div class="mt-2">Xecas</div>
                             </label>
                         </div>
                         <div class="col-2 d-flex flex-column align-items-center" style="width: 200px;">
-                            <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off">
-                            <label class="btn btn-outline-dark" for="option2" style="width: 150px;">
+                            <input type="radio" class="btn-check" name="options-base" id="pan_dulce" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="pan_dulce" style="width: 150px;">
                                 <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
                                 <div class="mt-2">Pan Dulce</div>
                             </label>
                         </div>
                         <div class="col-2 d-flex flex-column align-items-center" style="width: 200px;">
-                            <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off">
-                            <label class="btn btn-outline-dark" for="option3" style="width: 150px;">
+                            <input type="radio" class="btn-check" name="options-base" id="pan_frances" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="pan_frances" style="width: 150px;">
                                 <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
                                 <div class="mt-2">Pan frances</div>
                             </label>
                         </div>
                         <div class="col-2 d-flex flex-column align-items-center" style="width: 200px;">
-                            <input type="radio" class="btn-check" name="options-base" id="option4" autocomplete="off">
-                            <label class="btn btn-outline-dark" for="option4" style="width: 150px;">
+                            <input type="radio" class="btn-check" name="options-base" id="concha" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="concha" style="width: 150px;">
                                 <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
                                 <div class="mt-2">Concha</div>
                             </label>
                         </div>
                         <div class="col-2 d-flex flex-column align-items-center" style="width: 200px;">
-                            <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off">
-                            <label class="btn btn-outline-dark" for="option5" style="width: 150px;">
+                            <input type="radio" class="btn-check" name="options-base" id="bolillo" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="bolillo" style="width: 150px;">
                                 <img src="img/if-food-c216-2427860_85697.png" width="100px" alt="">
                                 <div class="mt-2">Bolillo</div>
                             </label>
@@ -61,10 +61,10 @@
                     </div>
                     <div class="row g-3 justify-content-center align-items-center m-3">
                         <div class="col-auto">
-                            <label for="cantidad" class="form-label m-0">Cantidad</label>
+                            <label for="unidades" class="form-label m-0">Cantidad</label>
                         </div>
                         <div class="col-auto">
-                            <input type="number" class="form-control text-center" id="cantidad" min="1" value="1" style="width: 100px;">
+                            <input type="number" class="form-control text-center" id="unidades" value="1" min="1" style="width: 100px;">
                         </div>
                         <div class="col-auto">
                             <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
@@ -76,7 +76,7 @@
                 <h1 class="col-12 text-center">Resultados</h1>
                 <form action="" class="col-12 row gx-5 justify-content-center align-items-center">
                     <div class="col-12 col-sm-6">
-                        <div id="MD" class="form-text m-0">Material Directo</div>
+                        <div class="form-text m-0">Material Directo</div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">MD</span>
                             <input type="text" class="form-control" aria-label="MD"
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <div id="MOD" class="form-text m-0">Mano de Obra Directa</div>
+                        <div class="form-text m-0">Mano de Obra Directa</div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">MOD</span>
                             <input type="text" class="form-control" aria-label="MOD"
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <div id="CIF" class="form-text m-0">Costos Indirectos de Fabricación</div>
+                        <div class="form-text m-0">Costos Indirectos de Fabricación</div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">CIF</span>
                             <input type="text" class="form-control" aria-label="CIF" aria-describedby="basic-addon1"
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <div id="CT" class="form-text m-0">Costo Total</div>
+                        <div class="form-text m-0">Costo Total</div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">CT</span>
                             <input type="text" class="form-control" aria-label="CT"
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <div id="CU" class="form-text m-0">Costo Unitario</div>
+                        <div class="form-text m-0">Costo Unitario</div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">CU</span>
                             <input type="text" class="form-control" aria-label="CU"
