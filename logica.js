@@ -70,11 +70,18 @@ btn.addEventListener('click', () => {
         alert("Por favor seleccione un tipo de pan.");
         return;
     }
-    
+
     let resultado = tipo_panes[bread].calcularCosto(cantidad);
     OutputMD.value = formatoQ(resultado.md);
     OutputMOD.value = formatoQ(resultado.mod);
     OutputCIF.value = formatoQ(resultado.cif);
     OutputCT.value = formatoQ(resultado.costo_total);
     OutputCU.value = formatoQ(resultado.unitario);
+
+
+   if (window.innerWidth < 992) {
+    document.getElementById("resultados")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+
 });
