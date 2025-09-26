@@ -53,10 +53,14 @@ panes.forEach(pan => {
     });
 });
 
+function formatoQ(num){
+    return "Q " + num.toFixed(2);
+}
 
 btn.addEventListener('click', () => {
     let cantidad = unidades.value.trim();
     cantidad = Number(cantidad);
+
     if(isNaN(cantidad) || cantidad <= 0){
         alert("Por favor ingrese una cantidad válida.");
         return;
@@ -66,10 +70,11 @@ btn.addEventListener('click', () => {
         alert("Por favor seleccione un tipo de pan.");
         return;
     }
+    
     let resultado = tipo_panes[bread].calcularCosto(cantidad);
-    OutputMD.value = (resultado.md).toFixed(2);
-    OutputMOD.value = (resultado.mod).toFixed(2);
-    OutputCIF.value = (resultado.cif).toFixed(2);
-    OutputCT.value = (resultado.costo_total).toFixed(2);
-    OutputCU.value = (resultado.unitario).toFixed(2);
+    OutputMD.value = formatoQ(resultado.md);
+    OutputMOD.value = formatoQ(resultado.mod);
+    OutputCIF.value = formatoQ(resultado.cif);
+    OutputCT.value = formatoQ(resultado.costo_total);
+    OutputCU.value = formatoQ(resultado.unitario);
 });
